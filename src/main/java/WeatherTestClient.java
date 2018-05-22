@@ -51,7 +51,7 @@ public class WeatherTestClient {
 
             // check if the user already requested for the same url > cache Hit
             if (localeCache.isCacheHit(url.toUriString())) {
-                localeCache.getLocal_cache(url.toUriString());
+                forecasts = localeCache.getLocal_cache(url.toUriString());
                 System.out.println("\n *** Cache Hit, Fetching data from Local Cache *** \n");
             } else {
                 System.out.println("\n *** Cache Miss, Fetching  data from the server *** \n");
